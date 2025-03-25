@@ -1,0 +1,2 @@
+class ShahController < ApplicationController
+end

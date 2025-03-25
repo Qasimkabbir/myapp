@@ -1,0 +1,21 @@
+<h1>Edit Category</h1>
+<%= form_with model: @categories, local: true do |form| %>
+  <% if @categories.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@categories.errors.count, "error") %> prohibited this category from being saved:</h2>
+      <ul>
+        <% @categories.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+<%= link_to 'Back', categories_path %>

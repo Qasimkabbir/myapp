@@ -1,0 +1,11 @@
+Welcome jnb
+<% @categories.each do |category| %>
+    <div>
+    <%= link_to category.name, category_path(category.id), class: 'btn btn-primary' %>
+    <%= link_to 'Edit', edit_category_path(category.id), class: 'btn btn-primary' %>
+    <%= button_to 'Destroy', category_path(category.id), method: :delete %>
+
+    </div>
+     <% end %>
+      <%= link_to 'Back to Home', root_path, class: 'btn btn-primary' %>
+  <%= link_to 'create category',new_category_path, class: 'btn btn-primary' %>

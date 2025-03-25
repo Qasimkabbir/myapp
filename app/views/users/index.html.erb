@@ -1,0 +1,11 @@
+<% @users.each do |user| %>
+  <div>
+<%= link_to user.name , user_path(user.id), class: 'btn btn-primary' %>
+<%= link_to 'Edit', edit_user_path(user.id), class: 'btn btn-primary' %>
+<%= button_to 'Destroy', user_path(user.id), method: :delete %>
+</div>
+  
+  <% end %>
+ <%= link_to 'Back', root_path %>
+  <%= link_to 'create user', new_user_path %>
+   
