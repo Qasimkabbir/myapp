@@ -47,7 +47,7 @@ class UsersController < ApplicationController
         end
         def user_params
           # Only allow these parameters to be submitted through the form
-          params.require(:user).permit(:name)
+          params.require(:user).permit(:name,:birthday)
         end
       
 end

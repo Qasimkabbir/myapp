@@ -15,6 +15,11 @@
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
+  <div class="field">
+  <div class="field">
+  <%= form.label :birthday, "Date of Birth" %><br />
+  <%= form.date_select :birthday, order: [:year, :month, :day], prompt: { year: 'Year', month: 'Month', day: 'Day' }, start_year: Date.today.year - 100, end_year: Date.today.year - 18 %>
+</div>
   <div class="actions">
     <%= form.submit 'Submit' %>
   </div>
